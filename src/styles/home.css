@@ -1,0 +1,186 @@
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: rgb(110, 80, 170);
+
+    font-family: monospace;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* formulario */
+form{
+    display: flex;
+    gap: 5px;
+}
+
+form > input{
+    width: 210px;
+    height: 25px;
+
+    border-radius: 3px;
+    border: 2px solid black;
+
+    text-align: center;
+    font-weight: bold;
+
+    background-color: rgba(50, 50, 50, 0.782);
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form > button{
+    width: 75px;
+    
+    border-radius: 3px;
+    border: 0px;
+
+    background-color: rgb(220, 81, 81);
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+/* info cep*/
+#container_informacoes{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-auto-columns: 150px;
+    font-size: 10px;
+    gap: 10px;
+}
+
+.Cep{
+    grid-area: cep;
+    text-align: center;
+    margin-left: 20px;
+}
+.Cidade{
+    grid-area: cidade;
+    text-align: justify;
+    margin-left: 20px;
+}
+.Estado{
+    grid-area: estado;
+    text-align: justify;
+    margin-left: 20px;
+}
+.Rua{
+    grid-area: rua;
+    text-align: justify;
+    margin-left: 20px;
+}
+.Bairro{
+    grid-area: bairro;
+    text-align: justify;
+    margin-left: 20px;
+}
+
+#container_informacoes{
+    grid-template-areas: 
+        "cep cep"
+        "cidade estado"
+        "rua bairro"
+}
+
+@media screen and (min-width:768px){
+    form > input{
+        width: 210px;
+        height: 30px;
+    
+    
+    }
+    
+    form > button{
+        width: 75px;
+        
+    }
+    
+    /* info cep*/
+    #container_informacoes{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-auto-columns: 320px;
+        font-size: 15px;
+        gap: 10px;
+    }
+    
+    .Cep{
+        grid-area: cep;
+        text-align: center;
+    }
+    .Cidade{
+        grid-area: cidade;
+        text-indent: 60px;
+    }
+    .Estado{
+        grid-area: estado;
+        text-indent: 60px;
+    }
+    .Rua{
+        grid-area: rua;
+        text-indent: 60px;
+    }
+    .Bairro{
+        grid-area: bairro;
+        text-indent: 60px;
+    }
+    
+}
+
+@media screen and (min-width:1024px){
+    form > input{
+        width: 210px;
+        height: 25px;
+    
+        border-radius: 3px;
+        border: 2px solid black;
+    
+    }
+    
+    form > button{
+        width: 75px;
+        
+        border-radius: 3px;
+        border: 0px;
+    }
+    
+    /* info cep*/
+    #container_informacoes{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        gap: 10px;
+    }
+    
+    .Cep{
+        grid-area: cep;
+        text-align: center;
+    }
+    .Cidade{
+        grid-area: cidade;
+        text-indent: 60px;
+    }
+    .Estado{
+        grid-area: estado;
+        text-indent: 60px;
+    }
+    .Rua{
+        grid-area: rua;
+        text-indent: 60px;
+    }
+    .Bairro{
+        grid-area: bairro;
+        text-indent: 60px;
+    }
+    
+}
