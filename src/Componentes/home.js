@@ -34,11 +34,13 @@ export default function Home(){
 
     return(
         <main id="container">
+            {/* formulario */}
             <form>
                 <input type="text" value={input} onChange={(e) => setInput(e.target.value)}/>
                 <button onClick={seachCep}>Buscar</button>
             </form>
-            {console.log(cep)}
+
+            {/* container */}
             {cep.hasOwnProperty('cep') ? <div id='container_informacoes'>
                 <h1 className='Cep'>{cep.cep}</h1>
                 <h2 className='Cidade'>Cidade: {cep.localidade}</h2>
