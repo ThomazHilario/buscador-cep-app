@@ -1,7 +1,8 @@
 import '../styles/home.css'
 import axios from 'axios'
 import {useState} from 'react'
-
+import "react-toastify/dist/ReactToastify.css";
+import {toast} from 'react-toastify'
 
 export default function Home(){
     // state - input
@@ -22,9 +23,10 @@ export default function Home(){
 
                 // armazenando o objeto na state cep
                 setCep(data)
+                toast.success('CPF Encontrado')
             }catch(e){
                 console.log(e)
-                alert('Cep invalido!!')
+                toast.error('Cep invalido!!')
             }
         }
 
