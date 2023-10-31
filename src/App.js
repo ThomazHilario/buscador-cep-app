@@ -4,7 +4,7 @@ import RoutesPage from './Componentes/Routes/routes'
 function App() {
   return (
     <div className="App">
-      <ToastContainer autoClose={3000}/>
+      <ToastContainer autoClose={1500} position='top-center' theme='colored'/>
       <RoutesPage/>
     </div>
   );
